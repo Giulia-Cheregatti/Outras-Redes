@@ -19,16 +19,18 @@ body {
     border-radius: 15px; /* Cantos arredondados do quadrado */
     background-color: rgba(50, 50, 50, 0.8);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
-    width: 1000px; /* Largura máxima */
-    margin:  0 auto; /* Centraliza horizontalmente */
+    width: 90%; /* Largura máxima responsiva */
+    max-width: 1000px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
     margin-top: 170px;
 }
 
 .links h1 {
-    font-size: 2.0rem;
+    font-size: 2rem;
     margin-bottom: 40px;
     margin-top: 40px;
     color: #ffffff;
+    text-align: center; /* Centraliza o texto */
 }
 
 /* Botões com estilo semelhante ao do Site Profissional */
@@ -37,6 +39,7 @@ body {
     flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
+    width: 100%; /* Certifique-se de que a div de botões ocupe 100% da largura */
 }
 
 .btnLinks a {
@@ -44,14 +47,49 @@ body {
     text-decoration: none;
     background-color: #007bff;
     color: #ffffff;
-    padding: 15px 50px;
+    padding: 15px 30px; /* Ajuste do padding para melhor responsividade */
     border-radius: 8px;
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
-    width: 450px;
+    width: 100%; /* Largura responsiva */
+    max-width: 450px; /* Largura máxima do botão */
     text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 .btnLinks a:hover {
     background-color: #0056b3; /* Cor de hover semelhante */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .links {
+        margin-top: 100px; /* Ajusta a margem superior em telas menores */
+        padding: 20px; /* Adiciona um pouco de padding para a seção */
+    }
+
+    .links h1 {
+        font-size: 1.8rem; /* Diminui o tamanho da fonte do título */
+    }
+
+    .btnLinks a {
+        padding: 12px; /* Ajusta o padding dos botões */
+        font-size: 1rem; /* Diminui o tamanho da fonte dos botões */
+    }
+}
+
+@media (max-width: 480px) {
+    .links {
+        margin-top: 80px; /* Ajusta a margem superior em telas menores */
+        padding: 10px; /* Diminui o padding */
+    }
+
+    .links h1 {
+        font-size: 1.5rem; /* Diminui ainda mais o tamanho da fonte do título */
+    }
+
+    .btnLinks a {
+        padding: 10px; /* Ajusta ainda mais o padding dos botões */
+        font-size: 0.9rem; /* Diminui o tamanho da fonte dos botões */
+    }
 }
